@@ -1,0 +1,90 @@
+body{
+    font-family: Poppins sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+header img{
+    width: 100%;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    flex-basis: 100%;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img{
+    flex-basis: 100%;
+    min-width: 0;
+    /* reference: https://stackoverflow.com/questions/28127423/flex-basis-not-working-as-expected*/
+}
+
+@keyframes logo_move{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+header img{
+    animation-name: logo_move;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+  }
+
+@media all and (min-width: 700px) {
+    header{
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    header img{
+        width: 400px;
+    }
+
+    nav{
+        margin-left: auto;
+    }
+
+    .nav_links{
+        flex-direction: row;
+    }
+
+    .card{
+        flex-basis:300px;
+    }
+
+    .gallery img{
+        flex-basis:300px;
+    }
+}
+
+@media (prefers-reduced-motion) {
+   header img{
+    animation:none;
+   }
+}
