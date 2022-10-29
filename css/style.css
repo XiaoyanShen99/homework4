@@ -43,10 +43,10 @@ header img{
 
 @keyframes logo_move{
     from{
-        opacity: 1;
+        opacity: 0;
     }
     to{
-        opacity: 0;
+        opacity: 1;
     }
 }
 
